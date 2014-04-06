@@ -1,9 +1,11 @@
+'use strict';
+
 (function() {
   var draw = SVG('curves');
   var points;
 
   var pathString = function(color) {
-    hash = points[color]
+    var hash = points[color];
     return 'M' + hash.leftTop + hash.topCurve + hash.rightTop + 'L' + hash.rightBottom + hash.bottomCurve + hash.leftBottom;
   }
 
@@ -38,11 +40,11 @@
     }
   }
 
-  adjustTop = function() {
+  function adjustTop() {
     var width = window.innerWidth;
     var offset = -199 + 200*1680/width;
     if (width <= 1000) offset = offset - 300*1000/width + 300;
-
+    if (width < 600) offset = offset - 80;
     var curves = document.getElementById('curves').style.top =  offset + 'px'
   }
 

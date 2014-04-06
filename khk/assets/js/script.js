@@ -1,3 +1,9 @@
+'use strict';
+
+document.onload = function() {
+  console.log('ready');
+};
+
 (function() {
 
   // document.addEventListener('mousedown', getPosition, false);
@@ -7,6 +13,7 @@
   // }
 
   document.getElementsByClass = function(match, selector) {
+    var i;
     var elems = document.getElementsByTagName(selector || '*'), elem, toReturn = [];
     for (i in elems) {
       if ((' ' + elems[i].className + ' ').indexOf(' ' + match + ' ') > -1){
