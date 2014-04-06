@@ -18,7 +18,7 @@
 
   document.addEventListener('click', clickHandler);
 
-  function fadeIn(el) {
+  function fadeIn(el, fn) {
     var siblings = document.getElementsByClass('tab'), i;
     for (i in siblings) {
       siblings[i].style.display = 'none';
@@ -26,24 +26,32 @@
     }
     el.style.opacity = 0;
     el.style.display = 'block';
-    el.className += ' active';
-    console.log(el.className);
     var opacity = 0.1;
     var int = setInterval(
       function() {
         el.style.opacity = opacity;
         opacity = opacity + 0.1;
         if (opacity >= 1.1) {
-          clearInterval(int)
+          clearInterval(int);
         }
       }
-    , 40)
+    , 40);
+    if (fn) fn.call();
   }
 
   function clickHandler(e) {
-    if (e.target.getAttribute('href')){
-      var el = document.getElementById(e.target.getAttribute('href').replace('#', ''));
-      fadeIn(el);
+    var href;
+    if (href = e.target.getAttribute('href')) {
+      var el = document.getElementById(href.replace('#', ''));
+      fadeIn(el, function() {
+        var siblings = document.getElementsByClass('active', 'a');
+        var i;
+        for (i in siblings) {
+          var subStr = siblings[i].className.match(/ /) ? ' active' : 'active';
+          siblings[i].className = siblings[i].className.replace(subStr, '');
+        }
+        e.target.className = [e.target.className, 'active'].join(' ');
+      });
       e.preventDefault();
     }
   }

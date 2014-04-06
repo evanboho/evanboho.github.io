@@ -68,6 +68,11 @@ ul.nav li a {
   text-decoration: none;
   display: block;
 }
+
+ul.nav a.active {
+  color: #226177;
+}
+
 .tabs {
   margin-top: 20px;
   padding: 10px;
