@@ -7,8 +7,9 @@
     return 'M' + hash.leftTop + hash.topCurve + hash.rightTop + 'L' + hash.rightBottom + hash.bottomCurve + hash.leftBottom;
   }
 
-  var getPoints = function() {
-    var width = window.innerWidth;
+  var getPoints = function(width) {
+    if (!width) width = window.innerWidth;
+    // width = 1680 - ((1680 - width) / 4)
     var height = window.innerHeight;
     points = {
       teal: {
@@ -38,16 +39,38 @@
     }
   }
 
+  adjustTop = function() {
+    var width = window.innerWidth;
+    var offset = -199 + 200*1680/width
+    var curves = document.getElementById('curves').style.top =  offset + 'px'
+  }
+
+  adjustTop();
+
   getPoints();
 
-  var teal = draw.path(pathString('teal')).fill('#6dd1dd').attr({'fill-opacity': 0.9});
-  var gray = draw.path(pathString('gray')).fill('#728c83').attr({'fill-opacity': 0.7});
+  var teal = draw.path(pathString('teal')).fill('#6dd1dd').attr({'fill-opacity': 0.8});
+  var gray = draw.path(pathString('gray')).fill('#728c83').attr({'fill-opacity': 0.8});
   var blue = draw.path(pathString('blue')).fill('#226177').attr({'fill-opacity': 1});
 
   window.onresize = function(e) {
+    adjustTop();
     getPoints();
     teal.plot(pathString('teal'));
     gray.plot(pathString('gray'));
     blue.plot(pathString('blue'));
+  }
+
+  window.onmousemove = function(e) {
+    var mod = Math.sin(e.y * e.x /100000) * 50 + 50;
+    getPoints(window.innerWidth + mod);
+    teal.plot(pathString('teal'));
+    mod = Math.sin(e.y * e.x /100000) * 75 + 75;
+    getPoints(window.innerWidth + mod);
+    gray.plot(pathString('gray'));
+    mod = Math.sin(e.y * e.x /100000) * 25 + 25;
+    getPoints(window.innerWidth + mod);
+    blue.plot(pathString('blue'));
+
   }
 })();
