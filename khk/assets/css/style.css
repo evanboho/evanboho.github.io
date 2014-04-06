@@ -45,6 +45,11 @@ body {
   /*font-family: Times New Roman;*/
 }
 
+.header .subtitle {
+  font-size: 0.8em;
+  color: #82a183;
+}
+
 .main {
   margin-top: 130px;
 }
@@ -118,5 +123,17 @@ ul.nav a.active {
   .header img {
     height: 25px;
     width: 25px;
+  }
+}
+
+@media(max-width: 400px) {
+  body {
+    font-size: 11px;
+  }
+  .header {
+    font-size: 14px;
+  }
+  .header .title {
+    font-size: 18px;
   }
 }
