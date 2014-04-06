@@ -9,7 +9,6 @@
 
   var getPoints = function(width) {
     if (!width) width = window.innerWidth;
-    // width = 1680 - ((1680 - width) / 4)
     var height = window.innerHeight;
     points = {
       teal: {
@@ -41,7 +40,9 @@
 
   adjustTop = function() {
     var width = window.innerWidth;
-    var offset = -199 + 200*1680/width
+    var offset = -199 + 200*1680/width;
+    if (width <= 1000) offset = offset - 300*1000/width + 300;
+
     var curves = document.getElementById('curves').style.top =  offset + 'px'
   }
 

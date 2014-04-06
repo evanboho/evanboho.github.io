@@ -22,9 +22,12 @@
     var siblings = document.getElementsByClass('tab'), i;
     for (i in siblings) {
       siblings[i].style.display = 'none';
+      siblings[i].className = siblings[i].className.replace('active', '').replace(' ', '')
     }
     el.style.opacity = 0;
     el.style.display = 'block';
+    el.className += ' active';
+    console.log(el.className);
     var opacity = 0.1;
     var int = setInterval(
       function() {
