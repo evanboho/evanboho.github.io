@@ -71,6 +71,5 @@
     mod = Math.cos(e.pageY * Math.pow(e.pageX,1.03) /100000) * 25 + 25;
     getPoints(window.innerWidth + mod);
     blue.plot(pathString('blue'));
-
   }
 })();

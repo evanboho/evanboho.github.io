@@ -1,7 +1,9 @@
 .center {
   text-align: center;
 }
-
+a:focus {
+    outline: none;
+}
 hr {
   margin: 10px;
 }
