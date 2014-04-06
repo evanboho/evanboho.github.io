@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  /*background-image: url('../bg.png');*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+curves {
+  opacity: 0.5;
+}
