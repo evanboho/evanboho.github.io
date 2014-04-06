@@ -51,7 +51,7 @@ body {
 }
 
 .main {
-  margin-top: 130px;
+  margin-top: 9em;
 }
 
 ul.nav {
@@ -79,7 +79,7 @@ ul.nav a.active {
 }
 
 .tabs {
-  margin-top: 20px;
+  margin-top: 1.3em;
   padding: 10px;
 }
 .tabs .tab {
@@ -119,10 +119,24 @@ ul.nav a.active {
   }
 }
 
+@media(max-width: 800px) {
+  @media(min-width: 600px) {
+    .main {
+      margin-top: 7em;
+    }
+  }
+}
+
 @media(max-width: 600px) {
   .header img {
     height: 25px;
     width: 25px;
+  }
+  .main {
+    margin-top: 6em;
+  }
+  ul.nav li a {
+    font-size: 1em;
   }
 }
 
@@ -135,5 +149,23 @@ ul.nav a.active {
   }
   .header .title {
     font-size: 18px;
+  }
+  .nav {
+    margin-top: 0;
+    font-size: 9px;
+  }
+  .tabs .tab {
+    width: 90%;
+    padding: 5%;
+  }
+  .left-tab-space {
+    display: none;
+  }
+}
+
+
+@media(max-width: 300px) {
+  ul.nav li a {
+    font-size: 0.85em;
   }
 }

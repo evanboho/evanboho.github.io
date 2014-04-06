@@ -43,9 +43,9 @@
   function adjustTop() {
     var width = window.innerWidth;
     var offset = -199 + 200*1680/width;
-    if (width <= 1000) offset = offset - 300*1000/width + 300;
-    if (width < 600) offset = offset - 80;
-    if (width < 400) offset = offset - 40;
+    if (width <= 1000) offset = offset - 300*1000/width + 285;
+    if (width < 600) offset = offset - 65;
+    if (width <= 400) offset = offset - 40;
     var curves = document.getElementById('curves').style.top =  offset + 'px'
   }
 
