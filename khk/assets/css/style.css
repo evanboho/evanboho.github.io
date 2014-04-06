@@ -9,7 +9,9 @@ hr {
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial;
+  font-family: Verdana, Geneva, sans-serif;
+  /*font-family: Arial;*/
+  /*font-family: Lucida Sans Unicode;*/
 }
 
 #curves {
@@ -37,6 +39,7 @@ body {
   color: #728c83;
   font-size: 1.3em;
   font-family: 'Marcellus SC', serif;
+  /*font-family: Times New Roman;*/
 }
 
 .main {
@@ -59,5 +62,36 @@ ul.nav li a {
   color: #82a183;
   text-decoration: none;
   display: block;
+}
+.tabs {
+  margin-top: 20px;
+  padding: 10px;
+}
+.tabs .tab {
+  display: none;
+  float: left;
+  width: 59%;
+  margin: 0;
+  padding: 0 4%;
+  min-height: 300px;
+
+}
+.tab-title {
+  color: #226177;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.tab-body {
+  font-size: 13px;
+  color: #666;
+}
+.left-tab-space {
+  float: left;
+  background-color: #728c83;
+  height: 100px;
+  width: 25%;
+  margin: 0 4%;
+  border-radius: 5px;
 }
 

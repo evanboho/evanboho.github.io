@@ -62,13 +62,13 @@
   }
 
   window.onmousemove = function(e) {
-    var mod = Math.sin(e.pageY * e.pageX /100000) * 25 + 25;
+    var mod = Math.sin(e.pageY * Math.pow(e.pageX,0.95) /100000) * 25 + 25;
     getPoints(window.innerWidth + mod);
     teal.plot(pathString('teal'));
-    mod = Math.sin(e.pageY * e.pageX /100000) * 50 + 50;
+    mod = Math.sin(e.pageY * Math.pow(e.pageX,1) /100000) * 25 + 25;
     getPoints(window.innerWidth + mod);
     gray.plot(pathString('gray'));
-    mod = Math.sin(e.pageY * e.pageX /100000) * 75 + 75;
+    mod = Math.cos(e.pageY * Math.pow(e.pageX,1.03) /100000) * 25 + 25;
     getPoints(window.innerWidth + mod);
     blue.plot(pathString('blue'));
 
