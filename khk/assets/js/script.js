@@ -15,7 +15,7 @@
     var chosen = Math.floor((Math.random() * imgs.length));
     for (var i in imgs) {
       if (i == chosen) {
-        imgs[i].style.display = 'block';
+        // imgs[i].style.display = 'block';
       } else {
         imgs[i].style.display = '';
       }
