@@ -102,12 +102,20 @@ ul.nav a.active {
   color: #666;
 }
 .left-tab-space {
+  position: relative;
   float: left;
   background-color: #728c83;
-  height: 100px;
+  height: 400px;
   width: 25%;
   margin: 0 4%;
   border-radius: 5px;
+}
+
+.left-tab-space img {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 @media(max-width: 980px) {

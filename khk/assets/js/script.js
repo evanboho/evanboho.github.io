@@ -1,10 +1,32 @@
 'use strict';
 
-document.onload = function() {
-  console.log('ready');
-};
-
 (function() {
+
+  document.showRandomImg = function() {
+    var leftTab = document.getElementsByClass('left-tab-space')[0];
+    var imgs = [];
+
+    for (var i in leftTab.childNodes) {
+      var el = leftTab.childNodes[i];
+      if (el.tagName === 'IMG') {
+        imgs.push(el);
+      }
+    }
+    var chosen = Math.floor((Math.random() * imgs.length));
+    for (var i in imgs) {
+      if (i == chosen) {
+        imgs[i].style.display = 'block';
+      } else {
+        imgs[i].style.display = '';
+      }
+    }
+
+
+  }
+
+  window.onload = function() {
+    document.showRandomImg();
+  }
 
   // document.addEventListener('mousedown', getPosition, false);
 
@@ -58,6 +80,11 @@ document.onload = function() {
           siblings[i].className = siblings[i].className.replace(subStr, '');
         }
         e.target.className = [e.target.className, 'active'].join(' ');
+        try {
+          document.showRandomImg();
+        } catch(e) {
+          console.log(e);
+        }
       });
       e.preventDefault();
     }
