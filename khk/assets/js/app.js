@@ -15,7 +15,9 @@ App.ApplicationRoute = Ember.Route.extend({
 });
 
 App.IndexRoute = Ember.Route.extend({
-  model: function() {}
+  beforeModel: function() {
+    this.transitionTo('pane', 'about');
+  }
 });
 
 App.PaneRoute = Ember.Route.extend({
