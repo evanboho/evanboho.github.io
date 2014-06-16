@@ -1,6 +1,6 @@
 'use strict';
 
-App.FIXTURES = [
+App.Pane.FIXTURES = [
   {
     id: 1,
     url: 'about',
@@ -37,3 +37,13 @@ App.FIXTURES = [
     body: 'For further information, please contact karen@khkuchar.com or call 630-649-9805'
   }
 ];
+
+App.Pane.imgFIXTURES = {
+  'about': "http://www.findingthebeingwithin.org/wp-content/uploads/2013/04/wisdom_tree_big.png",
+  'consulting': "http://i204.photobucket.com/albums/bb265/comprime/Druid.jpg",
+  'coaching': "http://shirtoid.com/wp-content/uploads/2011/04/wisdom-courage-power1.jpg",
+  'writing-circles': "http://www.sayakaganz.com/wp-content/uploads/2012/04/f-wisdom.jpg",
+  'contact': "http://shirtoid.com/wp-content/uploads/2011/04/wisdom-courage-power1.jpg"
+};
+
+

@@ -10,7 +10,7 @@ App.Router.map(function() {
 
 App.ApplicationRoute = Ember.Route.extend({
   model: function() {
-    return App.FIXTURES;
+    return App.Pane.FIXTURES;
   }
 });
 
@@ -22,7 +22,7 @@ App.IndexRoute = Ember.Route.extend({
 
 App.PaneRoute = Ember.Route.extend({
   model: function(params) {
-    return App.Pane.create(_.findWhere(App.FIXTURES, { url: params.pane_id }));
+    return App.Pane.create(_.findWhere(App.Pane.FIXTURES, { url: params.pane_id }));
   }
 });
 
@@ -53,13 +53,6 @@ Ember.Handlebars.helper('format-markdown', function(input) {
   return new Handlebars.SafeString(showdown.makeHtml(input));
 });
 
-Ember.Handlebars.helper('random-img', function(i) {
-    var urls = [
-      "http://www.findingthebeingwithin.org/wp-content/uploads/2013/04/wisdom_tree_big.png",
-      "http://i204.photobucket.com/albums/bb265/comprime/Druid.jpg",
-      "http://shirtoid.com/wp-content/uploads/2011/04/wisdom-courage-power1.jpg",
-      "http://www.sayakaganz.com/wp-content/uploads/2012/04/f-wisdom.jpg",
-      "http://shirtoid.com/wp-content/uploads/2011/04/wisdom-courage-power1.jpg"
-    ];
-    return new Handlebars.SafeString('<img src="' + urls[i-1] + '"/>');
+Ember.Handlebars.helper('random-img', function(paneName) {
+  return new Handlebars.SafeString('<img src="' + App.Pane.imgFIXTURES[paneName] + '"/>');
 })
