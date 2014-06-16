@@ -62,7 +62,7 @@ ul.nav {
 }
 ul.nav li {
   display: inline-block;
-  width: 24.5%;
+  width: 19.5%;
   text-align: center;
   margin-left: -.25%;
   margin-right: -.25%;
@@ -104,15 +104,47 @@ ul.nav a.active {
 .left-tab-space {
   position: relative;
   float: left;
-  background-color: #728c83;
+  /*background-color: #728c83;*/
   height: 400px;
   width: 25%;
   margin: 0 4%;
   border-radius: 5px;
 }
 
+#edit {
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  opacity: 0;
+}
+#edit:hover {
+  opacity: 1;
+}
+
+#cancelEdit {
+  margin-top: 20px;
+  float: right;
+  border-radius: 5px;
+}
+
+input {
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+textarea {
+  width: 200%;
+  padding: 5px;
+  border: 2px inset;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%
+}
+
 .left-tab-space img {
-  display: none;
   position: absolute;
   width: 100%;
   height: 100%;
