@@ -39,7 +39,7 @@ App.Pane.FIXTURES = [
 ];
 
 App.Pane.imgFIXTURES = {
-  'about': '/khk/assets/karen.jpg',
+  'about': 'http://evanboho.github.io/khk/assets/karen.jpg',
   'consulting': "http://i204.photobucket.com/albums/bb265/comprime/Druid.jpg",
   'coaching': "http://shirtoid.com/wp-content/uploads/2011/04/wisdom-courage-power1.jpg",
   'writing-circles': "http://www.sayakaganz.com/wp-content/uploads/2012/04/f-wisdom.jpg",
