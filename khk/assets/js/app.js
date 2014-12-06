@@ -10,7 +10,7 @@ App.Router.map(function() {
 
 App.ApplicationRoute = Ember.Route.extend({
   model: function() {
-    return App.Pane.FIXTURES;
+    return FIXTURES.content;
   }
 });
 
@@ -22,7 +22,7 @@ App.IndexRoute = Ember.Route.extend({
 
 App.PaneRoute = Ember.Route.extend({
   model: function(params) {
-    return App.Pane.create(_.findWhere(App.Pane.FIXTURES, { url: params.pane_id }));
+    return App.Pane.create(_.findWhere(FIXTURES.content, { url: params.pane_id }));
   }
 });
 
@@ -54,13 +54,7 @@ Ember.Handlebars.helper('format-markdown', function(input) {
 });
 
 Ember.Handlebars.helper('random-img', function(paneName) {
-  if (App.Pane.imgFIXTURES[paneName]) {
-    return new Handlebars.SafeString('<img src="' + App.Pane.imgFIXTURES[paneName] + '"/>');
+  if (FIXTURES.imgUrls[paneName]) {
+    return new Handlebars.SafeString('<img src="' + FIXTURES.imgUrls[paneName] + '"/>');
   }
 });
-
-$(function() {
-  _.each(_.values(App.Pane.imgFIXTURES), function(url) {
-    new Image().src = url;
-  });
-})

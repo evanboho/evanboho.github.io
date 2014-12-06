@@ -1,6 +1,8 @@
 'use strict';
 
-App.Pane.FIXTURES = [
+window.FIXTURES = {};
+
+FIXTURES.content = [
   {
     id: 1,
     url: 'about',
@@ -39,11 +41,16 @@ App.Pane.FIXTURES = [
   }
 ];
 
-App.Pane.imgFIXTURES = {
+FIXTURES.imgUrls = {
   'about': 'http://evanboho.github.io/khk/assets/karen.jpg',
   'coaching': 'http://evanboho.github.io/khk/assets/stickies.jpg',
   'writing-circles': 'http://evanboho.github.io/khk/assets/woman_writing.jpg',
   'contact': 'http://evanboho.github.io/khk/assets/vineyard.jpg',
 };
 
-
+// preload images for all panes.
+for (var key in FIXTURES.imgUrls) {
+  if (FIXTURES.imgUrls.hasOwnProperty(key)) {
+    new Image().src = FIXTURES.imgUrls[key];
+  }
+}
