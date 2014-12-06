@@ -42,7 +42,7 @@ App.Pane.imgFIXTURES = {
   'about': 'http://evanboho.github.io/khk/assets/karen.jpg',
   'coaching': 'http://evanboho.github.io/khk/assets/stickies.jpg',
   'writing-circles': 'http://evanboho.github.io/khk/assets/woman_writing.jpg',
-  'contact': "http://shirtoid.com/wp-content/uploads/2011/04/wisdom-courage-power1.jpg"
+  'contact': 'http://evanboho.github.io/khk/assets/vinevard.jpg',
 };
 
 
