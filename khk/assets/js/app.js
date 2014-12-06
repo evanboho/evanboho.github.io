@@ -57,4 +57,10 @@ Ember.Handlebars.helper('random-img', function(paneName) {
   if (App.Pane.imgFIXTURES[paneName]) {
     return new Handlebars.SafeString('<img src="' + App.Pane.imgFIXTURES[paneName] + '"/>');
   }
+});
+
+$(function() {
+  _.each(_.values(App.Pane.imgFIXTURES), function(url) {
+    new Image().src = url;
+  });
 })
