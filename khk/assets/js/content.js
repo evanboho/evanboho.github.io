@@ -43,7 +43,7 @@ App.Pane.imgFIXTURES = {
   'about': 'http://evanboho.github.io/khk/assets/karen.jpg',
   'coaching': 'http://evanboho.github.io/khk/assets/stickies.jpg',
   'writing-circles': 'http://evanboho.github.io/khk/assets/woman_writing.jpg',
-  'contact': 'http://evanboho.github.io/khk/assets/vinevard.jpg',
+  'contact': 'http://evanboho.github.io/khk/assets/vineyard.jpg',
 };
 
 
