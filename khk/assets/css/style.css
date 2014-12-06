@@ -33,9 +33,13 @@ body {
 
 .header {
   margin-top: 20px;
-  font-size: 1.5em;
+  font-size: 1.1em;
   letter-spacing: 2.5px;
   color: #226177;
+}
+
+.header .logo {
+  width: 100px;
 }
 
 .header .title {
@@ -51,7 +55,7 @@ body {
 }
 
 .main {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 ul.nav {
@@ -60,7 +64,7 @@ ul.nav {
   border: 1px solid #aaa;
   box-shadow: #999 0px 0px 40px;
   padding: 20px;
-  opacity: 0.9;
+  opacity: 0.95;
   list-style: none;
   width: 100%;
   background-color: #fff;

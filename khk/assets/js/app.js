@@ -54,5 +54,7 @@ Ember.Handlebars.helper('format-markdown', function(input) {
 });
 
 Ember.Handlebars.helper('random-img', function(paneName) {
-  return new Handlebars.SafeString('<img src="' + App.Pane.imgFIXTURES[paneName] + '"/>');
+  if (App.Pane.imgFIXTURES[paneName]) {
+    return new Handlebars.SafeString('<img src="' + App.Pane.imgFIXTURES[paneName] + '"/>');
+  }
 })
