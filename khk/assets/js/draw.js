@@ -42,7 +42,7 @@
 
   function adjustTop() {
     var width = window.innerWidth;
-    var offset = -230 + 200*1680/width;
+    var offset = -270 + 200*1680/width;
     if (width <= 1000) offset = offset - 300*1000/width + 285;
     if (width < 600) offset = offset - 65;
     if (width <= 400) offset = offset - 40;

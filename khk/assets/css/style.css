@@ -62,8 +62,8 @@ ul.nav {
   margin: 0;
   border-radius: 10px;
   border: 1px solid #aaa;
-  box-shadow: #999 0px 0px 40px;
-  padding: 20px;
+  box-shadow: #aaa 0px 0px 20px;
+  padding: 12px 0;
   opacity: 0.95;
   list-style: none;
   width: 100%;
@@ -104,10 +104,10 @@ ul.nav a.active {
   color: #226177;
   font-weight: bold;
   letter-spacing: 2px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .tab-body {
-  font-size: 13px;
+  font-size: 0.8em;
   color: #666;
 }
 .left-tab-space {
@@ -158,8 +158,19 @@ textarea {
   width: 100%;
   border-radius: 10px;
   border: 1px solid #333;
-  box-shadow: #999 0px 0px 40px;
+  box-shadow: #999 0px 0px 30px;
+}
 
+.img-alt {
+  box-shadow: #999 0px 0px 30px;
+  border-radius: 10px;
+  padding: 30px;
+  font-size: 19px;
+  font-family: 'Marcellus SC', serif;
+}
+
+.img-alt .attrib {
+  float: right;
 }
 
 @media(max-width: 980px) {

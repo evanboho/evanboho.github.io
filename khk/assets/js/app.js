@@ -57,8 +57,13 @@ Ember.Handlebars.helper('format-markdown', function(input) {
 
 Ember.Handlebars.helper('img-for-pane', function(paneName) {
   if (FIXTURES.imgUrls[paneName]) {
-    return new Handlebars.SafeString('<img src="' + FIXTURES.imgUrls[paneName] + '"/>');
+    var img = new Image()
+    img.src = FIXTURES.imgUrls[paneName];
+    img.onload = function() {
+      $('img').fadeIn();
+    }
+    return new Handlebars.SafeString('<img style="display: none;" src="' + FIXTURES.imgUrls[paneName] + '"/>');
   } else if (this.content && this.content.imgAlt){
-
+    return new Handlebars.SafeString('<div class="img-alt">' + this.content.imgAlt + '</div>');
   }
 });
