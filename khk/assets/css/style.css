@@ -61,8 +61,8 @@ body {
 ul.nav {
   margin: 0;
   border-radius: 10px;
-  border: 1px solid #aaa;
-  box-shadow: #aaa 0px 0px 20px;
+  /*border: 1px solid #999;*/
+  box-shadow: #999 0px 0px 10px;
   padding: 12px 0;
   opacity: 0.95;
   list-style: none;
@@ -105,6 +105,7 @@ ul.nav a.active {
   font-weight: bold;
   letter-spacing: 2px;
   margin-bottom: 0px;
+  font-family: 'Marcellus SC', serif;
 }
 .tab-body {
   font-size: 0.8em;
@@ -158,11 +159,11 @@ textarea {
   width: 100%;
   border-radius: 10px;
   border: 1px solid #333;
-  box-shadow: #999 0px 0px 30px;
+  box-shadow: #999 0px 0px 10px;
 }
 
-.img-alt {
-  box-shadow: #999 0px 0px 30px;
+.left-tab-space .img-alt {
+  box-shadow: #999 0px 0px 10px;
   border-radius: 10px;
   padding: 30px;
   font-size: 19px;
