@@ -30,7 +30,9 @@
     <script type="text/x-handlebars">
       <div class="container">
         <div class="header center">
-          <img class="logo" src="assets/logo.png">
+          {{#link-to 'pane' ''}}
+            <img class="logo" src="assets/logo.png">
+          {{/link-to}}
           <div class="title">KAREN HURLEY KUCHAR</div>
           <div>CONSULTING, INC.</div>
           <hr/>
@@ -45,7 +47,7 @@
             {{/each}}
           </ul>
           <div class="tabs">
-              {{outlet}}
+            {{outlet}}
           </div>
         </div>
       </div>
@@ -62,7 +64,7 @@
           {{textarea value=rawBody}}
           <button id="cancelEdit" {{action "edit" on="click"}}>Cancel</button>
         {{else}}
-          {{random-img url}}
+          {{img-for-pane url}}
         {{/if}}
       </div>
 
@@ -71,7 +73,7 @@
       <div class="tab-body" style="width: 59%; float: left;">
         {{format-markdown body}}
 
-      <label id="edit" {{action "edit" on="click"}}>edit</label>
+        <label id="edit" {{action "edit" on="click"}}>edit</label>
       </div>
     </script>
 

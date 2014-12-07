@@ -156,6 +156,10 @@ textarea {
 .left-tab-space img {
   position: absolute;
   width: 100%;
+  border-radius: 10px;
+  border: 1px solid #333;
+  box-shadow: #999 0px 0px 40px;
+
 }
 
 @media(max-width: 980px) {

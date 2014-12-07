@@ -10,13 +10,15 @@ App.Router.map(function() {
 
 App.ApplicationRoute = Ember.Route.extend({
   model: function() {
-    return FIXTURES.content;
+    return _.filter(FIXTURES.content, function(item) {
+      return item.link;
+    });
   }
 });
 
 App.IndexRoute = Ember.Route.extend({
   beforeModel: function() {
-    this.transitionTo('pane', 'about');
+    this.transitionTo('pane', '');
   }
 });
 
@@ -53,8 +55,10 @@ Ember.Handlebars.helper('format-markdown', function(input) {
   return new Handlebars.SafeString(showdown.makeHtml(input));
 });
 
-Ember.Handlebars.helper('random-img', function(paneName) {
+Ember.Handlebars.helper('img-for-pane', function(paneName) {
   if (FIXTURES.imgUrls[paneName]) {
     return new Handlebars.SafeString('<img src="' + FIXTURES.imgUrls[paneName] + '"/>');
+  } else if (this.content && this.content.imgAlt){
+
   }
 });
