@@ -33,10 +33,10 @@ FIXTURES.content = [
   },
   {
     id: 4,
-    url: 'writing-circles',
-    link: 'Writing Circles',
-    title: 'Writing Circles',
-    body: 'Writing Circles'
+    url: 'leadership-circles',
+    link: 'Leadership Circles',
+    title: 'Leadership Circles',
+    body: 'The Leadership Circle for Nonprofit Executives is a membership group that meets on a regular\nbasis and provides a confidential forum for chief executives to focus on strategic issues in the organization and personal leadership development. \n\nMeetings:\n\n• Offer members support and challenge from a peer group that understands their unique role in an organization\n\n• Hold members accountable to personal and organizational goals\n\n• Define and track Key Performance Indicators, as identified by the members\n\n• Provide each member an annual opportunity to share in depth their concerns and organizational strategies and priorities and receive feedback from the group\n\n• Build a network of nonprofit professionals who share information and resources and serve as a sounding board during and between meetings\n\nExecutives can join a cohort group that meets 7-9 times during the year. Contact Karen Kuchar at karen@khkuchar.com for availability.'
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ FIXTURES.imgUrls = {
   '': 'http://evanboho.github.io/khk/assets/goldfish.jpg',
   'about': 'http://evanboho.github.io/khk/assets/karen.jpg',
   'coaching': 'http://evanboho.github.io/khk/assets/stickies.jpg',
-  'writing-circles': 'http://evanboho.github.io/khk/assets/woman_writing.jpg',
+  'leadership-circles': 'http://evanboho.github.io/khk/assets/swirl.jpg',
   'contact': 'http://evanboho.github.io/khk/assets/vineyard.jpg',
 };
 
