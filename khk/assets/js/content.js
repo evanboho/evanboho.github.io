@@ -49,7 +49,7 @@ FIXTURES.content = [
 
 FIXTURES.imgUrls = {
   '': 'http://evanboho.github.io/khk/assets/goldfish.jpg',
-  'about': 'http://evanboho.github.io/khk/assets/karen.jpg',
+  'about': 'http://evanboho.github.io/khk/assets/karen-large.jpg',
   'coaching': 'http://evanboho.github.io/khk/assets/stickies.jpg',
   'leadership-circles': 'http://evanboho.github.io/khk/assets/swirl.jpg',
   'contact': 'http://evanboho.github.io/khk/assets/vineyard.jpg',
