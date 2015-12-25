@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: fantasy, cursive, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.step {
+  display: none;
+  width: 60%;
+  margin: 100px 20% 20px 20%;
+}
+
+@media (max-width: 940px) {
+  .step {
+    width: 86%;
+    margin: 100px 7% 20px 7%;
+  }
+}
+#step-1 {
+  margin: 0 auto;
+  background-image: url("/x/goat.png");
+  background-position: center 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.message {
+  font-size: 1.3rem;
+}
+
+.message h2 {
+  color: #5d0039;
+}
+
+#continue {
+  display: none;
+  width: 202px;
+  margin: 0 auto;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  padding-top: 5px;
+}
+
+#continue a, #continue a:hover, #continue a:visited {
+  padding: 20px;
+  font-size: 2.5em;
+  color: #333;
+}
+
+#xmas-lights {
+  background-image: url("/x/xmas-lights.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 800px;
+}
+
+#xmas-lights h2 {
+  color: white;
+  width: 482px;
+  font-size: 2em;
+  margin: auto;
+  padding-top: 200px;
+}
+
+#xmas-lights a, #xmas-lights a:hover, #xmas-lights a:visited {
+  color: red;
+}
